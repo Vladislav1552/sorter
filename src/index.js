@@ -11,7 +11,6 @@ class Sorter {
     this.length++;
     this.array.push(element);
     
-  
     }
     at(index) {
       return this.array[index];
@@ -37,7 +36,7 @@ class Sorter {
         for (var i=0; i<indices.length;i++)
       
           {
-      
+  
             sorted[i]=this.array[indices[i]];
       
           }
@@ -47,15 +46,12 @@ class Sorter {
           {
             this.array[indices[i]]=sorted[i];
           }
-  
+
         return this.array;
 
         }
 
     setComparator(compareFunction) {
-
-
-       
 
     }
   

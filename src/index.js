@@ -26,33 +26,26 @@ class Sorter {
       
     }
     sort(indices) {
-  
-      function compareNumeric(a, b) 
-      {
-        if (a > b) return 1;
-        if (a < b) return -1;
-      }
+  indices.sort((a,b)=>a-b);
+var j;
+      
       var sorted=[];
         for (var i=0; i<indices.length;i++)
-      
           {
-  
             sorted[i]=this.array[indices[i]];
-      
           }
-          sorted.sort(compareNumeric);	
-        indices.sort(compareNumeric);
+          sorted.sort(this.compareFunction);	
           for (var i=0; i<indices.length;i++)
           {
-            this.array[indices[i]]=sorted[i];
+            j= indices[i];
+            this.array[j]=sorted[i];
           }
 
-        return this.array;
 
         }
 
     setComparator(compareFunction) {
-
+      this.compareFunction = compareFunction;
     }
   
   }
